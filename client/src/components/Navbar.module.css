@@ -1,19 +1,55 @@
+.navbarWrapper {
+  width: 100%; /* Ensure the wrapper spans the full width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .navbar {
+  box-sizing: border-box; /* Include padding and borders in the width */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
   padding: 10px 20px;
+  width: 100%; /* Ensure the navbar spans the full width */
+  max-width: 100%; /* Prevent it from exceeding the container width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  overflow: hidden; /* Prevent horizontal overflow */
 }
 
-.navbar ul {
+.navbarList {
   list-style: none;
   display: flex;
   gap: 15px;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.navItem {
+  display: inline-block;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
+  background: none !important; /* Ensure no background is applied */
+}
+
+.navbar li a {
+  background: none !important; /* Force removal of any background */
+}
+
+ul {
+  margin: 0; /* Ensure no extra margin */
+  padding: 0; /* Ensure no extra padding */
+}
+
+.navbarList li {
+  background: none; /* Remove any unintended background */
 }
