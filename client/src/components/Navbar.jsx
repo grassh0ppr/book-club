@@ -7,24 +7,28 @@ export default function Navbar() {
       <h1>📚 SFBB</h1>
       <ul>
         <li>
-          Home
-          {/* <Link to="/">Home</Link> */}
+          {/* Home */}
+          <Link to="/">Home</Link>
         </li>
         <li>
-          Calendar
-          {/* <Link to="/calendar">Calendar</Link> */}
+          {/* Calendar */}
+          <Link to="/calendar">Calendar</Link>
         </li>
         <li>
-          Messages
-          {/* <Link to="/messages">Messages</Link> */}
+          {/* Messages */}
+          <Link to="/messages">Messages</Link>
         </li>
         <li>
-          Suggestions
-          {/* <Link to="/suggestions">Suggestions</Link> */}
+          {/* Suggestions */}
+          <Link to="/suggestions">Suggestions</Link>
         </li>
         <li>
-          Login
-          {/* <Link to="/login">Login</Link> */}
+          {/* Login */}
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          {/* Burn Book */}
+          <Link to="/burnbook">Burn Book</Link>
         </li>
       </ul>
     </nav>

@@ -1,6 +1,5 @@
 // import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import styles from "./components/Navbar.module.css";
 
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -15,13 +14,17 @@ function App() {
   return (
     // this is where Router will go
     <>
-      <Navbar />
-      <Home />
-      <Login />
-      <Calendar />
-      <MessageBoard />
-      <BookSuggestions />
-      <BurnBook />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/messages" element={<MessageBoard />} />
+          <Route path="/suggestions" element={<BookSuggestions />} />
+          <Route path="/burnbook" element={<BurnBook />} />
+        </Routes>
+      </Router>
     </>
   );
 }
