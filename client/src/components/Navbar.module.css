@@ -12,7 +12,7 @@
   color: white;
   padding: 10px 20px;
   width: 100%; /* Ensure the navbar spans the full width */
-  max-width: 100%; /* Prevent it from exceeding the container width */
+  max-width: 100%; /* Ensure the navbar does not exceed the viewport width */
   position: fixed;
   top: 0;
   left: 0;

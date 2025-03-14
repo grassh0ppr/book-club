@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.page}>
       <h2>Welcome to the SFBB home page</h2>
-      <p>This is our corner of the internet</p>
       <div>
-        <Link to="/login">Login</Link>
+        <Link className={styles.cta} to="/login">
+          Login
+        </Link>
       </div>
     </div>
   );
