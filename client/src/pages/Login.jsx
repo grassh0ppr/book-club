@@ -1,17 +1,27 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false); // Toggle between Login and Sign Up
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert("Login successful!");
+      if (isSignUp) {
+        await createUserWithEmailAndPassword(auth, email, password);
+        alert("Account created successfully!");
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
+        alert("Login successful!");
+      }
+      setError("");
     } catch (err) {
       setError(err.message);
     }
@@ -19,8 +29,8 @@ const Login = () => {
 
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
+      <h1>{isSignUp ? "Sign Up" : "Login"}</h1>
+      <form onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
@@ -33,9 +43,15 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
+      <p>
+        {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
+        <button onClick={() => setIsSignUp(!isSignUp)}>
+          {isSignUp ? "Login" : "Sign Up"}
+        </button>
+      </p>
     </div>
   );
 };
