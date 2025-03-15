@@ -45,15 +45,11 @@ export default function Navbar() {
           <li>
             <Link to="/burnbook">Burn Book</Link>
           </li>
-          {user ? (
+          {user && ( // Only show the logout button if a user is logged in
             <li>
               <button onClick={handleLogout} className={styles.logoutButton}>
                 Logout
               </button>
-            </li>
-          ) : (
-            <li>
-              <Link to="/login">Login</Link>
             </li>
           )}
         </ul>
