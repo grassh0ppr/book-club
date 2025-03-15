@@ -5,9 +5,12 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <h2>Welcome to the SFBB home page</h2>
-      <div>
+      <div style={{ display: "flex", gap: "1rem" }}>
         <Link className={styles.cta} to="/login">
           Login
+        </Link>
+        <Link className={styles.cta} to="/blog">
+          Blog
         </Link>
       </div>
     </div>

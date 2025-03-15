@@ -36,15 +36,25 @@ export default function Navbar() {
           <li>
             <Link to="/calendar">Calendar</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/messages">Messages</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/suggestions">Suggestions</Link>
           </li>
           <li>
-            <Link to="/burnbook">Burn Book</Link>
+            <Link to="/blog">Blog</Link>
           </li>
+          {user && ( // Only show the Burn Book link if a user is logged in
+            <li>
+              <Link to="/burnbook">Burn Book</Link>
+            </li>
+          )}
+          {user && ( // Only show the Dashboard link if a user is logged in
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+          )}
           {user && ( // Only show the logout button if a user is logged in
             <li>
               <button onClick={handleLogout} className={styles.logoutButton}>
