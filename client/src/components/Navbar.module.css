@@ -21,6 +21,10 @@
   overflow: hidden; /* Prevent horizontal overflow */
 }
 
+.navbar h1 {
+  color: #eee;
+}
+
 .navbarList {
   list-style: none;
   display: flex;
@@ -52,4 +56,18 @@ ul {
 
 .navbarList li {
   background: none; /* Remove any unintended background */
+}
+
+.logoutButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #e60000;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -10,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isSignUp, setIsSignUp] = useState(false); // Toggle between Login and Sign Up
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +22,7 @@ const Login = () => {
       } else {
         await signInWithEmailAndPassword(auth, email, password);
         alert("Login successful!");
+        navigate("/dashboard"); // Redirect to the dashboard page
       }
       setError("");
     } catch (err) {

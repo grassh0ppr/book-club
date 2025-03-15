@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
@@ -9,10 +8,10 @@ import Calendar from "./pages/Calendar";
 import MessageBoard from "./pages/MessageBoard";
 import BookSuggestions from "./pages/BookSuggestions";
 import BurnBook from "./pages/BurnBook";
+import Dashboard from "./pages/Dashboard"; // Import the Dashboard component
 
 function App() {
   return (
-    // this is where Router will go
     <>
       <Router>
         <Navbar />
@@ -23,6 +22,8 @@ function App() {
           <Route path="/messages" element={<MessageBoard />} />
           <Route path="/suggestions" element={<BookSuggestions />} />
           <Route path="/burnbook" element={<BurnBook />} />
+          <Route path="/dashboard" element={<Dashboard />} />{" "}
+          {/* Add the Dashboard route */}
         </Routes>
       </Router>
     </>
