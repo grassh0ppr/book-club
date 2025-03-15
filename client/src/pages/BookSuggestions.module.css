@@ -1,0 +1,111 @@
+.suggestionsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  transition: background-color 300ms, border-color 300ms;
+}
+
+.suggestionsForm label {
+  font-weight: bold;
+}
+
+.suggestionsForm input,
+.suggestionsForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.suggestionsForm button {
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 300ms;
+}
+
+.suggestionsForm button:hover {
+  background-color: #4a54d1;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .suggestionsForm {
+    background-color: #333;
+    border-color: #555;
+  }
+
+  .suggestionsForm input,
+  .suggestionsForm button {
+    border-color: #555;
+    background-color: #444;
+    color: white;
+  }
+
+  .suggestionsForm button:hover {
+    background-color: #646cff;
+  }
+}
+
+/* Suggestions list styles */
+.suggestionsList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.suggestionsList li {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 300ms, border-color 300ms;
+}
+
+.suggestionsList li:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestionsList p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.suggestionsList button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 300ms;
+}
+
+.suggestionsList button:hover {
+  color: #646cff;
+}
+
+/* Dark mode styles for suggestions list */
+@media (prefers-color-scheme: dark) {
+  .suggestionsList li {
+    background-color: #333;
+    border-color: #555;
+  }
+
+  .suggestionsList li:hover {
+    background-color: #444;
+  }
+
+  .suggestionsList button:hover {
+    color: #4a54d1;
+  }
+}

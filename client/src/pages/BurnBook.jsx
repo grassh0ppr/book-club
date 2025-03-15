@@ -17,7 +17,14 @@ function BurnBook() {
 
   return (
     <div className={styles.container}>
-      <h2>🔥 Burn Book: Where Books Get Roasted</h2>
+      {/* add image from public directory here */}
+      <img src="/burn-book-mean-girls-favim_com-298043.gif" alt="Burn Book" />
+      <h2>🔥 Burn Book: Where Books Get Roasted 💋</h2>
+      <p>the nastiest skank books you've ever read! do not read these!</p>
+      <p>
+        if you or a loved one have been personally victimized by a ratchet read
+        or some fugly smut, put it in the book.
+      </p>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
