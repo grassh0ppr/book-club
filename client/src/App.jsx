@@ -14,7 +14,7 @@ import Blog from "./pages/Blog"; // Import the Blog component
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/book-club">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
