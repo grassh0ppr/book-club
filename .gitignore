@@ -32,3 +32,5 @@ public
 
 # Ignore Firebase configuration
 src/firebase.js
+firebase.js
+client/src/firebase.js
