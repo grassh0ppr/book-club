@@ -26,3 +26,9 @@ dist-ssr
 # Assets
 # Ignore public directory
 public
+
+# Ignore environment variables
+.env
+
+# Ignore Firebase configuration
+src/firebase.js
