@@ -1,6 +1,6 @@
 # Santa Fe Book Club App
 
-## Build with React + Vite, Express, MongoDB
+## Built with React + Vite, Express, MongoDB
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
