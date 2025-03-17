@@ -1,0 +1,46 @@
+#root {
+  text-align: left;
+}
+.marquee {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  box-sizing: border-box;
+  margin: 1.5rem 2rem;
+  /* animation: marquee 30s linear infinite; */
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.blogPost {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  max-width: 420px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.blogPost p {
+  width: 100%;
+}
+
+.blogPost .sources {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Make it move */
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
