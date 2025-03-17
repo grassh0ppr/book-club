@@ -26,3 +26,30 @@ The Santa Fe Book Club App is designed for the Santa Fe Book Babes. This app wil
 - **Burn Book**: A fun section inspired by the Burn Book from the film Mean Girls (2004).
 
 This is a portfolio project with a playful twist, aiming to provide a fun and engaging experience for book club members.
+
+
+## Project Structure
+```
+/project-root
+│── /client
+│   │── /public           # Static assets (favicon, index.html, etc.)
+│   │── /src              # Source code for the React app
+│   │   │── /components   # Reusable UI components
+│   │   │── /pages        # Page components (Home, Login, etc.)
+│   │   │── /styles       # Global and component-specific styles
+│   │   ├── App.jsx       # Main App component
+│   │   ├── main.jsx      # React entry point
+│   ├── package.json      # Frontend dependencies
+│   ├── vite.config.js    # (if using Vite) or webpack.config.js
+│
+│── /server
+│   │── /routes           # Express routes
+│   │── /models           # Database models
+│   │── /controllers      # Logic for handling requests
+│   │── /config           # Configuration files
+│   ├── server.js         # Main Express server
+│   ├── package.json      # Backend dependencies
+│
+├── .gitignore
+├── README.md
+```
